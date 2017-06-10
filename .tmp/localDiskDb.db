@@ -24,11 +24,26 @@
         "createdAt": "2017-06-10T04:42:53.650Z",
         "updatedAt": "2017-06-10T04:42:53.650Z",
         "id": 3
+      },
+      {
+        "name": "test",
+        "lastname": "testing",
+        "email": "test@test.com",
+        "password": "test",
+        "createdAt": "2017-06-10T19:55:10.138Z",
+        "updatedAt": "2017-06-10T19:55:10.138Z",
+        "id": 4
       }
     ]
   },
   "schema": {
     "user": {
+      "name": {
+        "type": "string"
+      },
+      "lastname": {
+        "type": "string"
+      },
       "email": {
         "type": "string"
       },
@@ -51,7 +66,7 @@
   },
   "counters": {
     "user": {
-      "id": 3
+      "id": 4
     }
   }
 }

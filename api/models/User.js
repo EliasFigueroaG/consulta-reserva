@@ -8,11 +8,11 @@
 module.exports = {
 
   attributes: {
-    nombre: {
+    name: {
       type: 'string',
       required: true
     },
-    apellido: {
+    lastname: {
       type: 'string',
       required: true
     },
@@ -33,6 +33,7 @@ module.exports = {
    *
    * @param  {Object}   inputs
    *                     • name     {String}
+   *                     • lastname {String}
    *                     • email    {String}
    *                     • password {String}
    * @param  {Function} cb
@@ -42,6 +43,7 @@ module.exports = {
     // Create a user
     User.create({
       name: inputs.name,
+      lastname: inputs.lastname,
       email: inputs.email,
       // TODO: But encrypt the password first
       password: inputs.password

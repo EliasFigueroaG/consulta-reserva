@@ -8,6 +8,14 @@
 module.exports = {
 
   attributes: {
+    nombre: {
+      type: 'string',
+      required: true
+    },
+    apellido: {
+      type: 'string',
+      required: true
+    },
     email: {
       type: 'email',
       required: true
@@ -63,4 +71,3 @@ module.exports = {
     .exec(cb);
   }
 };
-

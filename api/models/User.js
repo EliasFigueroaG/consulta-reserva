@@ -33,7 +33,7 @@ module.exports = {
    *
    * @param  {Object}   inputs
    *                     • name     {String}
-   *                     • lastname     {String}
+   *                     • lastname {String}
    *                     • email    {String}
    *                     • password {String}
    * @param  {Function} cb

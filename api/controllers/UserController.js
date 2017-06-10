@@ -51,6 +51,7 @@ module.exports = {
     // Attempt to signup a user using the provided parameters
     User.signup({
       name: req.param('name'),
+      lastname: reg.param('lastname'),
       email: req.param('email'),
       password: req.param('password')
     }, function (err, user) {
@@ -75,4 +76,3 @@ module.exports = {
     });
   }
 };
-

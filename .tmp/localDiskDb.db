@@ -1,5 +1,47 @@
 {
   "data": {
+    "propiedad": [
+      {
+        "ownerID": "3",
+        "name": "test",
+        "address": "tes123",
+        "description": "teeeest",
+        "value": 22,
+        "createdAt": "2017-06-13T04:27:57.395Z",
+        "updatedAt": "2017-06-13T04:27:57.395Z",
+        "id": 5
+      },
+      {
+        "ownerID": "5",
+        "name": "lalal",
+        "address": "lalal",
+        "description": "lalal",
+        "value": 24,
+        "createdAt": "2017-06-13T05:26:24.533Z",
+        "updatedAt": "2017-06-13T05:26:24.533Z",
+        "id": 6
+      },
+      {
+        "ownerID": "5",
+        "name": "lala2",
+        "address": "lala2",
+        "description": "lala2",
+        "value": 2323,
+        "createdAt": "2017-06-13T06:09:50.235Z",
+        "updatedAt": "2017-06-13T06:09:50.235Z",
+        "id": 7
+      },
+      {
+        "ownerID": "5",
+        "name": "asdf",
+        "address": "valpo 222",
+        "description": "pero que bonita propiedad",
+        "value": 20,
+        "createdAt": "2017-06-13T08:22:41.804Z",
+        "updatedAt": "2017-06-13T08:22:41.804Z",
+        "id": 8
+      }
+    ],
     "user": [
       {
         "name": "123@123.com",
@@ -33,11 +75,115 @@
         "createdAt": "2017-06-10T19:55:10.138Z",
         "updatedAt": "2017-06-10T19:55:10.138Z",
         "id": 4
+      },
+      {
+        "name": "elias",
+        "lastname": "figueroa",
+        "email": "elias@gmail.com",
+        "password": "elias",
+        "createdAt": "2017-06-13T04:52:46.604Z",
+        "updatedAt": "2017-06-13T04:52:46.604Z",
+        "id": 5
+      },
+      {
+        "name": "Elias1",
+        "lastname": "Elias2",
+        "email": "elias@gmail.com",
+        "password": "elias",
+        "createdAt": "2017-06-13T04:58:03.112Z",
+        "updatedAt": "2017-06-13T04:58:03.112Z",
+        "id": 6
+      },
+      {
+        "name": "Elias5",
+        "lastname": "Elias5",
+        "email": "elias5@gmail.com",
+        "password": "elias5",
+        "createdAt": "2017-06-13T06:56:04.699Z",
+        "updatedAt": "2017-06-13T06:56:04.699Z",
+        "id": 7
+      },
+      {
+        "name": "elias15",
+        "lastname": "elias",
+        "email": "elasas15@asdf.com",
+        "password": "adsttt",
+        "createdAt": "2017-06-13T07:10:29.139Z",
+        "updatedAt": "2017-06-13T07:10:29.139Z",
+        "id": 8
+      },
+      {
+        "name": "Rene",
+        "lastname": "Noel",
+        "email": "rene@hola.com",
+        "password": "rene",
+        "createdAt": "2017-06-13T07:47:12.207Z",
+        "updatedAt": "2017-06-13T07:47:12.207Z",
+        "id": 9
+      },
+      {
+        "name": "testin",
+        "lastname": "adsda",
+        "email": "asdsa@asd.com",
+        "password": "adsttt",
+        "createdAt": "2017-06-13T07:48:15.854Z",
+        "updatedAt": "2017-06-13T07:48:15.855Z",
+        "id": 10
+      },
+      {
+        "name": "asdas",
+        "lastname": "asdas",
+        "email": "elias6@gmail.com",
+        "password": "elias5",
+        "createdAt": "2017-06-13T07:48:58.144Z",
+        "updatedAt": "2017-06-13T07:48:58.144Z",
+        "id": 11
+      },
+      {
+        "name": "asdf",
+        "lastname": "asdsaf",
+        "email": "fff@gmail.com",
+        "password": "adsttt123",
+        "createdAt": "2017-06-13T07:49:49.351Z",
+        "updatedAt": "2017-06-13T07:49:49.351Z",
+        "id": 12
       }
     ]
   },
   "schema": {
+    "propiedad": {
+      "ownerid": {
+        "type": "integer"
+      },
+      "name": {
+        "type": "string"
+      },
+      "address": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "value": {
+        "type": "integer"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
     "user": {
+      "userID": {
+        "type": "integer"
+      },
       "name": {
         "type": "string"
       },
@@ -66,7 +212,10 @@
   },
   "counters": {
     "user": {
-      "id": 4
+      "id": 12
+    },
+    "propiedad": {
+      "id": 8
     }
   }
 }

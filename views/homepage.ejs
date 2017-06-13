@@ -8,19 +8,91 @@
 
     <!--STYLES-->
     <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <!--STYLES END-->
   </head>
 
   <body>
+    <ul class="thumbnails">
+        <% if (req.session.me) { %>
+          <li class="span3">
+  					<div class="product-box">
+  						<span class="sale_tag"></span>
+              <p><form action="/listar" method="POST">
+              <!-- <a href="/propiedad/listar" >mostrar propiedades</a> -->
+              <button type="submit"></button>
+            </form></p>
+  						<!-- <p><a href="product_detail.html"><img src="http://im83.gulfup.com/tWTNYR.jpg" alt="" /></a></p> -->
+  						<a href="product_detail.html" class="title">Mis propiedades</a><br/>
+  						<a href="products.html" class="category">Revisar mis registros</a>
+  						<!-- <p class="price">$17.25</p> -->
+  					</div>
+  				</li>
+
+          <li class="span3">
+  					<div class="product-box">
+  						<span class="sale_tag"></span>
+  						<p><a href="/propiedad/new"><img src="http://im83.gulfup.com/tWTNYR.jpg" alt="" /></a></p>
+  						<a href="/propiedad/new" class="title">INGRESAR NUEVA PROPIEDAD</a><br/>
+  						<a href="products.html" class="category">Registra una nueva propiedad!</a>
+  						<!-- <p class="price">$17.25</p> -->
+  					</div>
+  				</li>
+        <% } %>
+
+				<li class="span3">
+					<div class="product-box">
+						<span class="sale_tag"></span>
+						<p><a href="/ejemplo"><img src="http://im83.gulfup.com/tWTNYR.jpg" alt="" /></a></p>
+						<a href="/ejemplo" class="title">PAGINA EJEMPLO</a><br/>
+						<a href="/ejemplo" class="category">Obten una idea de como se verá tu pagina</a>
+						<!-- <p class="price">$17.25</p> -->
+					</div>
+				</li>
+				<li class="span3">
+					<div class="product-box">
+						<span class="sale_tag"></span>
+						<p><a href="product_detail.html"><img src="http://im83.gulfup.com/OtxktE.jpg" alt="" /></a></p>
+						<a href="product_detail.html" class="title">TUTORIAL PARA CREAR Y MODIFICAR PROPIEDADES</a><br/>
+						<a href="products.html" class="category">EN CONSTRUCCION</a>
+						<!-- <p class="price">$32.50</p> -->
+					</div>
+				</li>
+        <% if (!req.session.me) { %>
+				<li class="span3">
+					<div class="product-box">
+						<p><a href="/signup"><img src="http://im83.gulfup.com/DyqzjA.jpg" alt="" /></a></p>
+						<a href="/signup" class="title">CREA TU CUENTA</a><br/>
+						<a href="/signup" class="category">Crea tu cuenta y registra tus propiedades ya!</a>
+						<!-- <p class="price">$14.20</p> -->
+					</div>
+				</li>
+				<li class="span3">
+					<div class="product-box">
+						<p><a href="/login"><img src="http://im83.gulfup.com/1wWOrd.jpg" alt="" /></a></p>
+						<a href="/login" class="title">INICIA SESION</a><br/>
+						<a href="/login" class="category">¿YA TIENES UNA CUENTA?</a>
+						<!-- <p class="price">$31.45</p> -->
+					</div>
+				</li>
+        <% } %>
+			</ul>
 
     <h1>Basic Login With Sails</h1>
-
-    <% if (req.session.me) { %>   <!--si hay var de session activa, ofrezco logout, sino login y singup-->
-    <a href="/logout">Logout</a>
-    <% } else { %>
-    <a href="/login">Login</a> | <a href="/signup">Signup</a>    <!-- redirect a la ruta correspondiente -->
-    <% } %>
-
+    <div class="container">
+      <% if (req.session.me) { %>   <!--si hay var de session activa, ofrezco logout, sino login y singup-->
+      <a href="/logout">Logout</a>
+      <a href="/listar">mostrar href</a>
+      <form action="/listar" method="POST">
+      <!-- <a href="/propiedad/listar" >mostrar propiedades</a> -->
+      <button type="submit">mostrar</button>
+      </form>
+      <a href="/propiedad/new">agregar propiedad</a>
+      <!-- <h1> tu id es : <%=req.session.me%></h1> -->
+      <% } else { %>
+      <a href="/login">Login</a> | <a href="/signup">Signup</a>    <!-- redirect a la ruta correspondiente -->
+      <% } %>
+    </div>
 
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>

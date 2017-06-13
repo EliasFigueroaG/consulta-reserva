@@ -1,20 +1,22 @@
-<!-- <h1>Signup</h1>
-<form action="/signup" method="post">
+<!--
+<h1>Signup</h1>
+<form action="/propiedad/create/" method="POST">
 
-  <label for="name">Esriba su nombre</label>
-  <input name="name" type="text" placeholder="nombre"/>
+  <input type="hidden" name="owner" value="<%=req.session.me %>"/>
+  <label for="name">nombre propiedad</label>
+  <input name="name" type="text" placeholder="nombre propiedad"/>
   <br/>
 
-  <label for="name">Escriba su apellido</label>
-  <input name="lastname" type="text" placeholder="apellido"/>
+  <label for="address">direccion</label>
+  <input name="address" type="text" placeholder="direccion"/>
   <br/>
 
-  <label for="email">Indique su dirección de correo electronico?</label>
-  <input name="email" type="text"/>
+  <label for="descriptionl">descripcion</label>
+  <input name="description" type="text"/>
   <br/>
 
-  <label for="password">Elija una contraseña</label>
-  <input name="password" type="password"/>
+  <label for="value">tarifa</label>
+  <input name="value" type="password"/>
   <br/>
 
   <input type="submit"/>
@@ -40,59 +42,63 @@
 			<div class="row main">
 				<div class="panel-heading">
 	               <div class="panel-title text-center">
-	               		<h1 class="title">Consulta&Reserva</h1>
+	               		<h1 class="title">Nueva Propiedad</h1>
 	               		<hr />
 	               	</div>
 	            </div>
 				<div class="main-login main-center">
-					<form class="form-horizontal" method="post" action="/signup">
+					<form class="form-horizontal" method="post" action="/propiedad/create/">
+
+            <input type="hidden" name="owner" value="<%=req.session.me %>"/>
 
 						<div class="form-group">
 							<label for="name" class="cols-sm-2 control-label">Nombre</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="name" id="name"  placeholder="Ingrese su nombre"/>
+									<input type="text" class="form-control" name="name" id="name"  placeholder="Ingrese nombre de la propiedad"/>
 								</div>
 							</div>
 						</div>
 
             <div class="form-group">
-							<label for="lastname" class="cols-sm-2 control-label">Apellido</label>
+							<label for="address" class="cols-sm-2 control-label">Dirección</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="lastname" id="lastname"  placeholder="Ingrese su apellido"/>
+									<input type="text" class="form-control" name="address" id="address"  placeholder="ej: region,comuna,calle,numero"/>
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">Direccion de correo electronico</label>
+							<label for="Description" class="cols-sm-2 control-label">Description</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="email" id="email"  placeholder="Ingrese su email"/>
+                  <textarea name="description" class="form-control" id="description" placeholder="Descripción"/></textarea>
+									<!-- <input type="text" class="form-control" name="email" id="email"  placeholder="Ingrese su email"/> -->
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="password" class="cols-sm-2 control-label">Contraseña</label>
+							<label for="value" class="cols-sm-2 control-label">Contraseña</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="password"  placeholder="Ingrese una contraseña"/>
+									<input type="text" class="form-control" name="value" id="value"  placeholder="Tarifa diaria"/>
+                  <
 								</div>
 							</div>
 						</div>
 
 
 						<div class="form-group ">
-							<button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+							<button type="submit" class="btn btn-primary btn-lg btn-block login-button">Listo</button>
 						</div>
 						<div class="login-register">
-				            <a href="index.php">Login</a>
+				            <a href="/">Cancelar</a>
 				         </div>
 					</form>
 				</div>

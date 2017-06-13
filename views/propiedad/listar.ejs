@@ -1,0 +1,26 @@
+<!-- <div class="container">
+	<div class="panel panel-default">
+		<div class="panel-body text-center">
+			<h3><%= propiedades.name %></h3><hr>
+			<article>
+				<%= propiedades.description %>
+			</article>
+		</div>
+	</div>
+</div> -->
+
+<div class="col-md-10">
+			<% _.each(propiedades, function (propiedad) { %>
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<h3 class="text-center"><%= propiedad.name %></h3><hr>
+						<article>
+							<%= propiedad.description %>
+						</article>
+					</div>
+					<div class="panel-footer">
+						<a href="/post/watch/<%= propiedad.id %>" class="btn btn-info">LEARN MORE</a>
+					</div>
+				</div>
+			<% }) %>
+</div>

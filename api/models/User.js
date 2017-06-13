@@ -7,7 +7,12 @@
 
 module.exports = {
 
+
   attributes: {
+    userID:{
+      type: 'integer',
+      autoIncremente: true
+    },
     name: {
       type: 'string',
       required: true

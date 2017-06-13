@@ -78,21 +78,6 @@
         <% } %>
 			</ul>
 
-    <h1>Basic Login With Sails</h1>
-    <div class="container">
-      <% if (req.session.me) { %>   <!--si hay var de session activa, ofrezco logout, sino login y singup-->
-      <a href="/logout">Logout</a>
-      <a href="/listar">mostrar href</a>
-      <form action="/listar" method="POST">
-      <!-- <a href="/propiedad/listar" >mostrar propiedades</a> -->
-      <button type="submit">mostrar</button>
-      </form>
-      <a href="/propiedad/new">agregar propiedad</a>
-      <!-- <h1> tu id es : <%=req.session.me%></h1> -->
-      <% } else { %>
-      <a href="/login">Login</a> | <a href="/signup">Signup</a>    <!-- redirect a la ruta correspondiente -->
-      <% } %>
-    </div>
 
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>

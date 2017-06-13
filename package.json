@@ -1,5 +1,4 @@
-{
-  "name": "basic-login",
+"name": "basic-login",
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
@@ -31,15 +30,14 @@
     "debug": "node debug app.js"
   },
   "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/EliasFigueroaG/consulta-reserva.git"
+  "repository":{
+    "type": "git"
   },
   "author": "EliasFigueroaG",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/EliasFigueroaG/consulta-reserva/issues"
-  },
-  "homepage": "https://github.com/EliasFigueroaG/consulta-reserva/
-  "devDependencies": {}
+  }
+
 }
+

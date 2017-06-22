@@ -9,9 +9,28 @@
 	</div>
 </div> -->
 
-<div class="col-md-10">
+
+
+<div class="panel panel-default">
+<div class="container">
+	<h3>Propiedades</h3>
+	<table class='table'>
+		<tr>
+			<th>Nombre</th>
+			<th>Descripción</th>
+			<th></th>
+</tr>
+
+
 			<% _.each(propiedades, function (propiedad) { %>
-				<div class="panel panel-default">
+			<tr>
+				<td><%= propiedad.name %></td>
+				<td><%= propiedad.description %></td>
+				<td><a href="/user/show/<%=propiedad.id %>" class="btn btn-small btn-primary">Show</a></td>
+			<td><a href="/user/edit/<%=propiedad.id %>" class="btn btn-small btn-warning">Edit</a></td>
+			<td><a href="/user/destroy/<%propiedad.id %>" class="btn btn-small btn-danger">Delete</a></td>
+		</tr>
+				<!-- <div class="panel panel-default">
 					<div class="panel-body">
 						<h3 class="text-center"><%= propiedad.name %></h3><hr>
 						<article>
@@ -21,6 +40,10 @@
 					<div class="panel-footer">
 						<a href="/post/watch/<%= propiedad.id %>" class="btn btn-info">LEARN MORE</a>
 					</div>
-				</div>
+				</div> -->
+			</div>
+			<!-- <div class="panel-footer">
+				<a href="/post/watch/<%= propiedad.id %>" class="btn btn-info">LEARN MORE</a>
+			</div> -->
+		</div>
 			<% }) %>
-</div>

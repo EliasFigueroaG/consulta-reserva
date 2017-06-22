@@ -19,6 +19,25 @@
         "createdAt": "2017-06-22T09:52:09.355Z",
         "updatedAt": "2017-06-22T09:52:09.355Z",
         "id": 9
+      },
+      {
+        "ownerID": "13",
+        "name": "Donde no sé",
+        "address": "tampoco sé",
+        "description": "nadie sabe",
+        "dorms": 0,
+        "baños": 0,
+        "superficieutil": 0,
+        "superficietotal": 0,
+        "telefono": 977746313,
+        "estacionamiento": 0,
+        "tarifaminima": "$0",
+        "cupominimo": 0,
+        "tarifaextra": "$0",
+        "cupomaximo": 0,
+        "createdAt": "2017-06-22T10:35:54.343Z",
+        "updatedAt": "2017-06-22T10:35:54.343Z",
+        "id": 10
       }
     ],
     "user": [
@@ -138,7 +157,7 @@
       "id": 13
     },
     "propiedad": {
-      "id": 9
+      "id": 10
     }
   }
 }

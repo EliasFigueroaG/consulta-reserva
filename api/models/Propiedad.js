@@ -71,6 +71,10 @@ module.exports = {
       type: 'integer',
       defaultsTo: 0,
       required: true
+    },
+    descriptionext:{
+      type: 'text',
+      defaultsTo:'Esta es la descripción por defecto, el propietario debe editar esta seccion segun sus necesidades. Recomendacion: explorar otras areas de la pagina apra no repetir informacion'
     }
 }
 };

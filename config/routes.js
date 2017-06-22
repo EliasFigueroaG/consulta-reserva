@@ -11,7 +11,7 @@ module.exports.routes = {
   'get /ejemplo' : {view: 'ejemplo'},
 
   // Endpoints
-
+  'get /propiedad/watch/:id': 'PropiedadController.show',
   'post /listar': 'PropiedadController.index',
   'post /propiedad/create/': 'PropiedadController.create',
   'post /login': 'UserController.login',

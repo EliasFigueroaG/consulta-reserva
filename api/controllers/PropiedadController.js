@@ -46,8 +46,16 @@ create: function(req, res){
 
 });
 
-} //fin propiedad create
-
+}, //fin propiedad create
+show: function (req, res) {
+    Propiedad.findOne(req.param('id')).exec(function(err, prop) {
+      if (!prop) return res.send(404);
+      if (err) return res.send(500);
+      res.view('propiedad/watch',{
+        propiedad: prop
+      });
+    });
+}
 
 
 }

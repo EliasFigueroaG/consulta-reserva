@@ -35,8 +35,8 @@ create: function(req, res){
 			ownerID : req.param('owner'),
       name: req.param('name'),
       address: req.param('address'),
-      description: req.param('description'),
-      value: req.param('value')
+      description: req.param('description')
+      // value: req.param('value')
 		};
 		Propiedad.create(propiedadObj).exec(function (err, propiedad) {
 			if (err) {

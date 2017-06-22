@@ -1,6 +1,26 @@
 {
   "data": {
-    "propiedad": [],
+    "propiedad": [
+      {
+        "ownerID": "13",
+        "name": "Donde Elias",
+        "address": "valparaiso 12345",
+        "description": "asd",
+        "dorms": 0,
+        "baños": 0,
+        "superficieutil": 0,
+        "superficietotal": 0,
+        "telefono": 977746313,
+        "estacionamiento": 0,
+        "tarifaminima": "$0",
+        "cupominimo": 0,
+        "tarifaextra": "$0",
+        "cupomaximo": 0,
+        "createdAt": "2017-06-22T09:52:09.355Z",
+        "updatedAt": "2017-06-22T09:52:09.355Z",
+        "id": 9
+      }
+    ],
     "user": [
       {
         "name": "Elias",
@@ -60,7 +80,7 @@
       },
       "cupominimo": {
         "type": "integer",
-        "defaultsTo": ""
+        "defaultsTo": 0
       },
       "tarifaextra": {
         "type": "string",
@@ -68,7 +88,7 @@
       },
       "cupomaximo": {
         "type": "integer",
-        "defaultsTo": ""
+        "defaultsTo": 0
       },
       "id": {
         "type": "integer",
@@ -118,7 +138,7 @@
       "id": 13
     },
     "propiedad": {
-      "id": 8
+      "id": 9
     }
   }
 }

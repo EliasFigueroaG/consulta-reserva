@@ -26,7 +26,7 @@ module.exports = {
     },
     value: {
       type: 'integer',
-      required: true
+
     },
     dorms:{
       type: 'integer',
@@ -59,7 +59,7 @@ module.exports = {
     },
     cupominimo:{
       type: 'integer',
-      defaultsTo: '',
+      defaultsTo: 0,
       required: true
     },
     tarifaextra:{
@@ -69,7 +69,7 @@ module.exports = {
     },
     cupomaximo:{
       type: 'integer',
-      defaultsTo: '',
+      defaultsTo: 0,
       required: true
     }
 }

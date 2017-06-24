@@ -1,7 +1,47 @@
 {
   "data": {
-    "propiedad": [],
-    "user": []
+    "propiedad": [
+      {
+        "ownerID": "1",
+        "name": "Hola",
+        "address": "valparaiso",
+        "description": "1234",
+        "dorms": 0,
+        "baños": 0,
+        "superficieutil": 0,
+        "superficietotal": 0,
+        "telefono": 977746313,
+        "estacionamiento": 0,
+        "tarifaminima": "$0",
+        "cupominimo": 0,
+        "tarifaextra": "$0",
+        "cupomaximo": 0,
+        "descriptionext": "Esta es la descripción por defecto, el propietario debe editar esta seccion segun sus necesidades. Recomendacion: explorar otras areas de la pagina apra no repetir informacion",
+        "createdAt": "2017-06-23T01:17:21.519Z",
+        "updatedAt": "2017-06-23T01:17:21.519Z",
+        "id": 1
+      }
+    ],
+    "user": [
+      {
+        "name": "René",
+        "lastname": "Noél",
+        "email": "rene@noel.com",
+        "password": "rene",
+        "createdAt": "2017-06-23T01:15:41.111Z",
+        "updatedAt": "2017-06-23T01:15:41.111Z",
+        "id": 1
+      },
+      {
+        "name": "Elias",
+        "lastname": "Figueroa",
+        "email": "eliastest@gmail.com",
+        "password": "adsttt",
+        "createdAt": "2017-06-24T02:25:43.700Z",
+        "updatedAt": "2017-06-24T02:25:43.700Z",
+        "id": 2
+      }
+    ]
   },
   "schema": {
     "propiedad": {
@@ -108,7 +148,11 @@
     }
   },
   "counters": {
-    "propiedad": {},
-    "user": {}
+    "propiedad": {
+      "id": 1
+    },
+    "user": {
+      "id": 2
+    }
   }
 }

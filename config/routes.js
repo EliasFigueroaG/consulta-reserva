@@ -7,7 +7,7 @@ module.exports.routes = {
   'get /propiedad/new': {view: 'propiedad/new'},
   //'get /propiedad/listar': {view: 'propiedad/testing'},
   '/welcome': { view: 'user/welcome' },
-  'get /listar': { view: 'propiedad/listar' },
+  'get /listar': 'PropiedadController.index',
   'get /ejemplo' : {view: 'ejemplo'},
 
   // Endpoints

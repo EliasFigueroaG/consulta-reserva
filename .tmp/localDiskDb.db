@@ -20,6 +20,26 @@
         "createdAt": "2017-06-23T01:17:21.519Z",
         "updatedAt": "2017-06-23T01:17:21.519Z",
         "id": 1
+      },
+      {
+        "ownerID": "3",
+        "name": "Propiedad donde koreano",
+        "address": "quilpue, 1234",
+        "description": "esta es la propiedad del container",
+        "dorms": 0,
+        "baños": 0,
+        "superficieutil": 0,
+        "superficietotal": 0,
+        "telefono": 977746313,
+        "estacionamiento": 0,
+        "tarifaminima": "$0",
+        "cupominimo": 0,
+        "tarifaextra": "$0",
+        "cupomaximo": 0,
+        "descriptionext": "Esta es la descripción por defecto, el propietario debe editar esta seccion segun sus necesidades. Recomendacion: explorar otras areas de la pagina apra no repetir informacion",
+        "createdAt": "2017-06-24T18:43:05.793Z",
+        "updatedAt": "2017-06-24T18:43:05.793Z",
+        "id": 2
       }
     ],
     "user": [
@@ -40,6 +60,15 @@
         "createdAt": "2017-06-24T02:25:43.700Z",
         "updatedAt": "2017-06-24T02:25:43.700Z",
         "id": 2
+      },
+      {
+        "name": "Elias",
+        "lastname": "Figueroa",
+        "email": "koreano@gmail.com",
+        "password": "koreano",
+        "createdAt": "2017-06-24T05:03:49.552Z",
+        "updatedAt": "2017-06-24T05:03:49.552Z",
+        "id": 3
       }
     ]
   },
@@ -149,10 +178,10 @@
   },
   "counters": {
     "propiedad": {
-      "id": 1
+      "id": 2
     },
     "user": {
-      "id": 2
+      "id": 3
     }
   }
 }

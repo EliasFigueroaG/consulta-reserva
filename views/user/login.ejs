@@ -212,27 +212,21 @@
 	    </div>
 	  </div>
 	</nav>
-
 	<div class="jumbotron text-center">
 	  <h1>Consulta Y Reserva</h1>
-
 	</div>
 	<div class="container" style="border:1px solid #ccc " align="center">
 	  <h2>Vertical (basic) Form</h2>
-
 			<span class="glyphicon glyphicon-user logo" ></span>
-
-    <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
-
-	  <form class="text-center style="border:1px solid #ccc"">
+	  <form class="text-center" method="post" style="border:1px solid #ccc" action="/login">
 			<div class="container">
 			    <div class="form-group">
 			      <label for="email">Email:</label>
-			      <input size="10" type="email" class="form-control" id="email" placeholder="Enter email">
+			      <input size="10" type="email" name="email" class="form-control" id="email" placeholder="Enter email">
 			    </div>
 			    <div class="form-group">
-			      <label for="pwd">Password:</label>
-			      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+			      <label for="passwprd">Password:</label>
+			      <input type="password"  name="password" class="form-control" id="password" placeholder="Enter password">
 			    </div>
 			    <div class="checkbox">
 			      <label><input type="checkbox"> Remember me</label>

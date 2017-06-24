@@ -40,6 +40,15 @@
         "createdAt": "2017-06-24T02:25:43.700Z",
         "updatedAt": "2017-06-24T02:25:43.700Z",
         "id": 2
+      },
+      {
+        "name": "Elias",
+        "lastname": "Figueroa",
+        "email": "koreano@gmail.com",
+        "password": "koreano",
+        "createdAt": "2017-06-24T05:03:49.552Z",
+        "updatedAt": "2017-06-24T05:03:49.552Z",
+        "id": 3
       }
     ]
   },
@@ -152,7 +161,7 @@
       "id": 1
     },
     "user": {
-      "id": 2
+      "id": 3
     }
   }
 }

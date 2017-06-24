@@ -223,6 +223,9 @@
 </div>
 
 <!-- Container (About Section) -->
+
+
+<% if (!req.session.me) { %>
 <div id="about" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
@@ -306,7 +309,9 @@
     <h2>Empieza</h2>
     <h4>lorem ipsum</h4>
   </div>
+
   <div class="row slideanim">
+
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
@@ -332,6 +337,8 @@
         </div>
       </div>
     </div>
+
+
     <div class="col-sm-4 col-xs-12">
       <div class="panel panel-default text-center">
         <div class="panel-heading">
@@ -354,6 +361,54 @@
   </div>
 </div>
 
+<% } else{%>
+
+  <div id="services" class="container-fluid text-center">
+    <h2>Servicios</h2>
+    <h4>Te ofrecemos</h4>
+    <br>
+    <div class="row ">
+      <a href="/listar">
+      <div class="col-sm-4">
+
+        <span class="glyphicon glyphicon-home logo-small"></span>
+
+        <h4>Ver mis propiedades</h4>
+        <p>Personaliza como se ven tus propiedades</p>
+      </div>
+      </a>
+      <div class="col-sm-4">
+        <span href="#myPage" class="glyphicon glyphicon-calendar logo-small"></span>
+        <h4>Ingresar nueva propiedad</h4>
+        <p>Registra mas propiedades para arriendo</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-list-alt logo-small"></span>
+        <h4>Resumen de reservas</h4>
+        <p>Resumen de ingresos y ocupacion de tus propiedades en el pasado</p>
+      </div>
+    </div>
+    <br><br>
+    <!-- <div class="row slideanim">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-leaf logo-small"></span>
+        <h4>GREEN</h4>
+        <p>Lorem ipsum dolor sit amet..</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-certificate logo-small"></span>
+        <h4>CERTIFIED</h4>
+        <p>Lorem ipsum dolor sit amet..</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-wrench logo-small"></span>
+        <h4 style="color:#303030;">HARD WORK</h4>
+        <p>Lorem ipsum dolor sit amet..</p>
+      </div>
+    </div> -->
+  </div>
+
+  <% } %>
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">CONTACT</h2>

@@ -12,7 +12,6 @@ module.exports = {
     ownerid: {
       type: 'integer'
     },
-
     name: {
       type: 'string',
       required: true
@@ -27,8 +26,55 @@ module.exports = {
     },
     value: {
       type: 'integer',
-      required: true
-    }
-  }
 
+    },
+    dorms:{
+      type: 'integer',
+      defaultsTo: '0'
+    },
+    baños:{
+      type: 'integer',
+      defaultsTo: '0'
+    },
+    superficieutil:{
+      type: 'integer',
+      defaultsTo: '0'
+    },
+    superficietotal:{
+      type: 'integer',
+      defaultsTo: '0'
+    },
+    telefono:{
+      type:'integer',
+      defaultsTo: '977746313'
+    },
+    estacionamiento:{
+      type: 'integer',
+      defaultsTo: '0'
+    },
+    tarifaminima: {
+      type: 'string',
+      defaultsTo: '$0',
+      required:true
+    },
+    cupominimo:{
+      type: 'integer',
+      defaultsTo: 0,
+      required: true
+    },
+    tarifaextra:{
+      type: 'string',
+      defaultsTo: '$0',
+      required:true
+    },
+    cupomaximo:{
+      type: 'integer',
+      defaultsTo: 0,
+      required: true
+    },
+    descriptionext:{
+      type: 'text',
+      defaultsTo:'Esta es la descripción por defecto, el propietario debe editar esta seccion segun sus necesidades. Recomendacion: explorar otras areas de la pagina apra no repetir informacion'
+    }
+}
 };

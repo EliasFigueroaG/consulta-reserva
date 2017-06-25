@@ -35,8 +35,8 @@ create: function(req, res){
 			ownerID : req.param('owner'),
       name: req.param('name'),
       address: req.param('address'),
-      description: req.param('description'),
-      value: req.param('value')
+      description: req.param('description')
+      // value: req.param('value')
 		};
 		Propiedad.create(propiedadObj).exec(function (err, propiedad) {
 			if (err) {
@@ -46,8 +46,50 @@ create: function(req, res){
 
 });
 
-} //fin propiedad create
+}, //fin propiedad create
+show: function (req, res) {
+    Propiedad.findOne(req.param('id')).exec(function(err, prop) {
+      if (!prop) return res.send(404);
+      if (err) return res.send(500);
+      res.view('propiedad/watch',{
+        propiedad: prop
+      });
+    });
+},
 
+edit: function (req, res) {
+    Propiedad.findOne(req.param('id')).exec(function(err, prop) {
+      if (!prop) return res.send(404);
+      if (err) return res.send(500);
+      res.view('propiedad/edit',{
+        propiedad: prop
+      });
+    });
+},
+
+
+updatename: function (req, res) {
+
+
+		// var name= req.param('name');
+
+			sails.log('id es '+ req.param('id'));
+			sails.log('name es '+req.param('name'));
+
+		Propiedad.update({id:req.param('id')}, {name:req.param('name')}).exec(function (err,updated) {
+			if (err) return res.send(500);
+			sails.log('Updated propiedad to have name ' + updated[0].name);
+
+			Propiedad.findOne(req.param('id')).exec(function(err, prop) {
+	      if (!prop) return res.send(404);
+	      if (err) return res.send(500);
+	      res.view('propiedad/edit',{
+	        propiedad: prop
+	      });
+	    });
+		});
+
+},
 
 
 }

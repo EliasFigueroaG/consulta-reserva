@@ -9,9 +9,11 @@ module.exports.routes = {
   '/welcome': { view: 'user/welcome' },
   'get /listar': 'PropiedadController.index',
   'get /ejemplo' : {view: 'ejemplo'},
-
-  // Endpoints
+  'get /propiedad/edit/:id': 'PropiedadController.edit',
   'get /propiedad/watch/:id': 'PropiedadController.show',
+  // Endpoints
+  'post /listar': 'PropiedadController.index',
+  'post /propiedad/updatename': 'PropiedadController.updatename',
   'post /listar': 'PropiedadController.index',
   'post /propiedad/create/': 'PropiedadController.create',
   'post /login': 'UserController.login',

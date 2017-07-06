@@ -10,6 +10,101 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href='/styles/fullcalendar.min.css' rel='stylesheet' />
+  <link href='/styles/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+  <script src='/js/lib/moment.min.js'></script>
+  <script src='/js/lib/jquery.min.js'></script>
+  <script src='/js/lib/fullcalendar.min.js'></script>
+  <script>
+
+  	$(document).ready(function() {
+
+  		$('#calendar').fullCalendar({
+  			header: {
+  				left: 'prev,next today',
+  				center: 'title',
+  				right: 'month,agendaWeek,agendaDay'
+  			},
+  			defaultDate: '2017-05-12',
+  			navLinks: true, // can click day/week names to navigate views
+  			selectable: true,
+  			selectHelper: true,
+  			select: function(start, end) {
+  				var title = prompt('Event Title:');
+  				var eventData;
+  				if (title) {
+  					eventData = {
+  						title: title,
+  						start: start,
+  						end: end
+  					};
+  					$('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
+  				}
+  				$('#calendar').fullCalendar('unselect');
+  			},
+  			editable: true,
+  			eventLimit: true, // allow "more" link when too many events
+  			events: [
+  				{
+  					title: 'All Day Event',
+  					start: '2017-05-01'
+  				},
+  				{
+  					title: 'Long Event',
+  					start: '2017-05-07',
+  					end: '2017-05-10'
+  				},
+  				{
+  					id: 999,
+  					title: 'Repeating Event',
+  					start: '2017-05-09T16:00:00'
+  				},
+  				{
+  					id: 999,
+  					title: 'Repeating Event',
+  					start: '2017-05-16T16:00:00'
+  				},
+  				{
+  					title: 'Conference',
+  					start: '2017-05-11',
+  					end: '2017-05-13'
+  				},
+  				{
+  					title: 'Meeting',
+  					start: '2017-05-12T10:30:00',
+  					end: '2017-05-12T12:30:00'
+  				},
+  				{
+  					title: 'Lunch',
+  					start: '2017-05-12T12:00:00'
+  				},
+  				{
+  					title: 'Meeting',
+  					start: '2017-05-12T14:30:00'
+  				},
+  				{
+  					title: 'Happy Hour',
+  					start: '2017-05-12T17:30:00'
+  				},
+  				{
+  					title: 'Dinner',
+  					start: '2017-05-12T20:00:00'
+  				},
+  				{
+  					title: 'Birthday Party',
+  					start: '2017-05-13T07:00:00'
+  				},
+  				{
+  					title: 'Click for Google',
+  					url: 'http://google.com/',
+  					start: '2017-05-28'
+  				}
+  			]
+  		});
+
+  	});
+
+  </script>
   <style>
   body {
       font: 400 15px Lato, sans-serif;
@@ -188,6 +283,12 @@
         font-size: 150px;
     }
   }
+
+  #calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -224,221 +325,12 @@
 
 <!-- Container (About Section) -->
 
-
-<% if (!req.session.me) { %>
-<div id="about" class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8">
-      <h2>Ingresar tu propiedad al mercado de arriendo online.</h2><br>
-      <h4>Ingresar tu propiedad al mercado de arriendo online nunca fue tan facil.
-        Te facilitamos un sistema online en el que podras ingresar tus propiedades,
-         y personalizar un sitio web para cada una de estas segun tus necesidades.<br>
-         Ademas podras utilizar un sistema de reserva agil y intuitivo para interactuar con tus posibles clientes,
-         permitiendo que utilices tu tiempo de forma más eficiente.</h4><br>
-      <br>
-    </div>
-    <div class="col-sm-4">
-      <!-- <span ><img src="/images/placeholder/save_time.png" style="100%" class="glyphicon slideanim"></span> -->
-      <!-- <img src="/images/placeholder/save_time.png" style="width:10%"> -->
-      <span class="glyphicon glyphicon-time logo slideanim"></span>
-    </div>
-  </div>
-</div>
-
-<div class="container-fluid bg-grey">
-  <div class="row">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-home logo slideanim"></span>
-    </div>
-    <div class="col-sm-8">
-      <h2>Our Values</h2><br>
-      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-</div>
-
-<!-- Container (Services Section) -->
-<div id="services" class="container-fluid text-center">
-  <h2>Servicios</h2>
-  <h4>Te ofrecemos</h4>
-  <br>
-  <div class="row slideanim">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-home logo-small"></span>
-      <h4>SITIO WEB</h4>
-      <p>Sitio web para cada una de tus propiedades</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-calendar logo-small"></span>
-      <h4>Sitema de reservas</h4>
-      <p>Sistema para administrar reservas.</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-list-alt logo-small"></span>
-      <h4>Historial</h4>
-      <p>Sistema que te permitira llevar un registro de reservas, entregandote informacion de forma inteligente</p>
-    </div>
-  </div>
-  <br><br>
-  <!-- <div class="row slideanim">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-leaf logo-small"></span>
-      <h4>GREEN</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-certificate logo-small"></span>
-      <h4>CERTIFIED</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-wrench logo-small"></span>
-      <h4 style="color:#303030;">HARD WORK</h4>
-      <p>Lorem ipsum dolor sit amet..</p>
-    </div>
-  </div> -->
-</div>
+asdas
+	<div id='calendar'></div>
 
 
 
-<!-- Container (Pricing Section) -->
-<div id="pricing" class="container-fluid">
-  <div class="text-center">
-    <h2>Empieza</h2>
-    <h4>lorem ipsum</h4>
-  </div>
 
-  <div class="row slideanim">
-
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <!-- <a href="/signup" class="btn btn-default btn-lg btn-block">CREA UNA CUENTA</a><br/> -->
-          <!-- <h1>Ingresa</h1> -->
-          <a href="/login" class="btn btn-default btn-lg btn-block"><h1>Ingresa</h1></a><br/>
-        </div>
-        <div class="panel-body">
-          <p><strong>¿Ya tienes une cuenta?</strong> </p>
-        </div>
-
-      </div>
-    </div>
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <a href="/signup" class="btn btn-default btn-lg btn-block"><h1>Registro</h1></a><br/>
-        </div>
-        <div class="panel-body">
-
-          <p><strong>¿Aun no tienes cuenta?</strong> </p>
-
-        </div>
-      </div>
-    </div>
-
-
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Premium</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>100</strong> Lorem</p>
-          <p><strong>50</strong> Ipsum</p>
-          <p><strong>25</strong> Dolor</p>
-          <p><strong>10</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$49</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<% } else{%>
-
-  <div id="services" class="container-fluid text-center">
-    <h2>Servicios</h2>
-    <h4>Te ofrecemos</h4>
-    <br>
-    <div class="row ">
-      <a href="/listar">
-      <div class="col-sm-4">
-
-        <span class="glyphicon glyphicon-home logo-small"></span>
-
-        <h4>Ver mis propiedades</h4>
-        <p>Personaliza como se ven tus propiedades</p>
-      </div>
-      </a>
-      <a href="/propiedad/new">
-      <div class="col-sm-4">
-        <span href="#myPage" class="glyphicon glyphicon-calendar logo-small"></span>
-        <h4>Ingresar nueva propiedad</h4>
-        <p>Registra mas propiedades para arriendo</p>
-      </div>
-    </a>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-list-alt logo-small"></span>
-        <h4>Resumen de reservas</h4>
-        <p>Resumen de ingresos y ocupacion de tus propiedades en el pasado</p>
-      </div>
-    </div>
-    <br><br>
-    <!-- <div class="row slideanim">
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-leaf logo-small"></span>
-        <h4>GREEN</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-certificate logo-small"></span>
-        <h4>CERTIFIED</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-wrench logo-small"></span>
-        <h4 style="color:#303030;">HARD WORK</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
-    </div> -->
-  </div>
-
-  <% } %>
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
-    </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Add Google Maps -->
 <div id="googleMap" style="height:400px;width:100%;"></div>
@@ -536,10 +428,69 @@ $(document).ready(function(){
 
 
     <!--SCRIPTS-->
-    <script src="/js/dependencies/sails.io.js"></script>
+    <!-- <script src="/js/dependencies/sails.io.js"></script>
     <script src="/js/lib/fullcalendar.js"></script>
     <script src="/js/lib/fullcalendar.min.js"></script>
     <script src="/js/lib/jquery-ui.min.js"></script>
     <script src="/js/lib/jquery.min.js"></script>
-    <script src="/js/lib/moment.min.js"></script>
+    <script src="/js/lib/moment.min.js"></script> -->
     <!--SCRIPTS END-->
+
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link href='/styles/fullcalendar.min.css' rel='stylesheet' />
+<link href='/styles/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<script src='/js/lib/moment.min.js'></script>
+<script src='/js/lib/jquery.min.js'></script>
+<script src='/js/lib/fullcalendar.min.js'></script>
+<script>
+    window.data = <%= JSON.stringify(eventos) %>
+</script>
+<script>
+
+	$(document).ready(function() {
+
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,basicWeek,basicDay'
+			},
+			defaultDate: '2017-05-07',
+			navLinks: true, // can click day/week names to navigate views
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			events: './events.json'
+
+
+		});
+
+	});
+
+</script>
+<style>
+
+	body {
+		margin: 40px 10px;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+
+	#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+</style>
+</head>
+<body>
+
+	<div id='calendar'></div>
+
+</body>
+</html> -->

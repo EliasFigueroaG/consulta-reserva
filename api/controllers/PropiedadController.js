@@ -58,6 +58,10 @@ show: function (req, res) {
 },
 
 edit: function (req, res) {
+	// var fs = require('fs');
+	// var obj=JSON.parse(fs.readFileSync('./events.json','utf8'));
+	// console.log(obj)
+
     Propiedad.findOne(req.param('id')).exec(function(err, prop) {
       if (!prop) return res.send(404);
       if (err) return res.send(500);

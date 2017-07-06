@@ -9,8 +9,12 @@ module.exports.routes = {
   '/welcome': { view: 'user/welcome' },
   'get /listar': 'PropiedadController.index',
   'get /ejemplo' : {view: 'ejemplo'},
+  'get /quickstart' : {view:'quickstart'},
   'get /propiedad/edit/:id': 'PropiedadController.edit',
   'get /propiedad/watch/:id': 'PropiedadController.show',
+  // 'get /propiedad/calendar': {view:'propiedad/calendar'},
+  'get /propiedad/calendar': 'CalendarController.load',
+
   // Endpoints
   'post /listar': 'PropiedadController.index',
   'post /propiedad/updatename': 'PropiedadController.updatename',

@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+<script src='lib/jquery.min.js'></script>
+<script src='lib/moment.min.js'></script>
+<script src='fullcalendar/fullcalendar.js'></script>
 <style>
   body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif
   }
@@ -235,6 +239,8 @@ and is wrapped around the whole page content, except for the footer in this exam
       <h4><b>DISPONIBILIDAD</b></h4>
       <p> Revisa disponibilidad de arriendo segun las reservas hasta la fecha!</p>
       <br>
+      <a href="/propiedad/calendar" class="btn btn-default btn-lg btn-block"><h1>Ingresa</h1></a><br/>
+<div id='calendar'></div>
       <p> Consulta sobre tarifa diaria y simula el monto de tu reserva segun tus necesidades </p>
 
   </div><hr>
@@ -299,6 +305,14 @@ and is wrapped around the whole page content, except for the footer in this exam
   <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button> -->
   <p>Para contactarse con el desarrollador: elias.figueroag@alumnos.uv.cl</p>
 </footer>
+$(document).ready(function() {
 
+    // page is now ready, initialize the calendar...
+
+    $('#calendar').fullCalendar({
+        // put your options and callbacks here
+    })
+
+});
 </body>
 </html>

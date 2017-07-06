@@ -38,6 +38,7 @@
   "author": "mikermcneil",
   "license": "",
   "devDependencies": {
+    "cucumber": "^2.3.1",
     "mocha": "^3.4.2",
     "sinon": "^2.3.6",
     "supertest": "^3.0.0"

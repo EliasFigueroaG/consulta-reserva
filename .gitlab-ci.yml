@@ -13,9 +13,9 @@ stages:
 # Installs npm packages, transpiles ES6 -> ES5
 # Passes node_modules/, dist/ onto next steps using artifacts
 # build:
-#   stage: build
-#   script:
-#     - npm install
+  stage: build
+  script:
+    - npm install
 #     - ./bin/build
 #   artifacts:
 #     paths:

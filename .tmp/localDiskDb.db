@@ -23,7 +23,7 @@
       },
       {
         "ownerID": "3",
-        "name": "Propiedad donde Don René",
+        "name": "Propiedad donde Don Juan",
         "address": "quilpue, 1234",
         "description": "esta es la propiedad del container",
         "dorms": 0,
@@ -38,7 +38,7 @@
         "cupomaximo": 0,
         "descriptionext": "Esta es la descripción por defecto, el propietario debe editar esta seccion segun sus necesidades. Recomendacion: explorar otras areas de la pagina apra no repetir informacion",
         "createdAt": "2017-06-24T18:43:05.793Z",
-        "updatedAt": "2017-06-25T04:23:03.672Z",
+        "updatedAt": "2017-07-06T07:39:44.306Z",
         "id": 2
       }
     ],
